@@ -1,29 +1,46 @@
 [
   {
     "id": 1,
-    "title": "Clean Code",
-    "author": "Robert C. Martin",
-    "year": 2008,
-    "category": "Programming",
-    "description": "A handbook of agile software craftsmanship.",
-    "image": "assets/clean-code.jpg"
+    "title": "Inception",
+    "year": 2010,
+    "genre": "Science Fiction",
+    "rating": 8.8,
+    "runtime": 148,
+    "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+    "overview": "A skilled thief is given a chance at redemption if he can successfully perform an impossible task: inception.",
+    "image": "assets/inception.jpg"
   },
   {
     "id": 2,
-    "title": "The Pragmatic Programmer",
-    "author": "Andrew Hunt",
-    "year": 1999,
-    "category": "Programming",
-    "description": "Journey to mastery in software development.",
-    "image": "assets/pragmatic-programmer.jpg"
+    "title": "Interstellar",
+    "year": 2014,
+    "genre": "Science Fiction",
+    "rating": 8.6,
+    "runtime": 169,
+    "actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    "overview": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "image": "assets/interstellar.jpg"
   },
   {
     "id": 3,
-    "title": "1984",
-    "author": "George Orwell",
-    "year": 1949,
-    "category": "Novel",
-    "description": "A dystopian social science fiction novel.",
-    "image": "assets/1984.jpg"
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genre": "Action",
+    "rating": 9.0,
+    "runtime": 152,
+    "actors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "overview": "Batman faces the Joker, a criminal mastermind who plunges Gotham City into chaos.",
+    "image": "assets/dark-knight.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Forrest Gump",
+    "year": 1994,
+    "genre": "Drama",
+    "rating": 8.8,
+    "runtime": 142,
+    "actors": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+    "overview": "The story of a man with a low IQ who achieves incredible things in his life.",
+    "image": "assets/forrest-gump.jpg"
   }
 ]

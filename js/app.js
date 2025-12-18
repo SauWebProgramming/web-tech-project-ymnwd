@@ -43,7 +43,7 @@ const displayBooks = (books) => {
 
     card.innerHTML = `
       <h3>${book.title}</h3>
-      <p><strong>Author:</strong> ${book.author}</p>
+      <p><strong>Author:</strong> ${book.author || "Unknown"}</p>
       <p><strong>Year:</strong> ${book.year}</p>
 
       <button class="details-btn" data-id="${book.id}">
