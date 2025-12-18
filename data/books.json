@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "year": 2008,
+    "category": "Programming",
+    "description": "A handbook of agile software craftsmanship.",
+    "image": "assets/clean-code.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "year": 1999,
+    "category": "Programming",
+    "description": "Journey to mastery in software development.",
+    "image": "assets/pragmatic-programmer.jpg"
+  },
+  {
+    "id": 3,
+    "title": "1984",
+    "author": "George Orwell",
+    "year": 1949,
+    "category": "Novel",
+    "description": "A dystopian social science fiction novel.",
+    "image": "assets/1984.jpg"
+  }
+]
