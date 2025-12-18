@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Library</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+
+  <header>
+    <nav>
+      <h1>Media Library</h1>
+
+      <ul>
+        <li><button id="homeBtn">Home</button></li>
+        <li><button id="favoritesBtn">Favorites</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Search -->
+    <section id="searchSection">
+      <input type="text" id="searchInput" placeholder="Search by title..." />
+    </section>
+
+    <!-- Media List -->
+    <section id="listSection">
+      <div id="mediaList"></div>
+    </section>
+
+    <!-- Detail View (SPA) -->
+    <section id="detailSection" style="display: none;">
+      <button id="backBtn">← Back</button>
+      <div id="detailContent"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Web Technologies Project</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
 </body>
 </html>
