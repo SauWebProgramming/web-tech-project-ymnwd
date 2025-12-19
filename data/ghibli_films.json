@@ -1,0 +1,268 @@
+[
+  {
+    "id": 1,
+    "title": "Nausicaä of the Valley of the Wind",
+    "romaji_title": "nausicaa",
+    "year": 1984,
+    "rating": 8.1,
+    "story": "Zehirli bir dünyada geçen film, Nausicaä adlı genç bir prensesin doğa ile insanlık arasında denge kurma mücadelesini anlatır.",
+    "characters": ["Nausicaä", "Asbel", "Kushana", "Lord Yupa"],
+    "poster_url": "https://www.ghibli.jp/images/nausicaa.jpg",
+    "imgs": [
+      "https://www.ghibli.jp/gallery/nausicaa001.jpg",
+      "https://www.ghibli.jp/gallery/nausicaa002.jpg",
+      "https://www.ghibli.jp/gallery/nausicaa003.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Castle in the Sky",
+    "romaji_title": "laputa",
+    "year": 1986,
+    "rating": 8.0,
+    "story": "Sheeta ve Pazu, gökyüzündeki efsanevi Laputa adasını ararken tehlikeli bir maceraya atılır.",
+    "characters": ["Sheeta", "Pazu", "Muska", "Dola"],
+    "poster_url": "https://www.ghibli.jp/images/laputa.jpg",
+    "imgs": [
+      "https://www.ghibli.jp/gallery/laputa001.jpg",
+      "https://www.ghibli.jp/gallery/laputa002.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "My Neighbor Totoro",
+    "romaji_title": "totoro",
+    "year": 1988,
+    "rating": 8.2,
+    "story": "İki kız kardeşin kırsal bir kasabada doğa ruhlarıyla kurduğu sıcak dostluğu anlatır.",
+    "characters": ["Totoro", "Satsuki", "Mei", "Catbus"],
+    "poster_url": "https://www.ghibli.jp/images/totoro.jpg",
+    "imgs": [
+      "https://www.ghibli.jp/gallery/totoro001.jpg",
+      "https://www.ghibli.jp/gallery/totoro002.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Grave of the Fireflies",
+    "romaji_title": "hotarunohaka",
+    "year": 1988,
+    "rating": 8.5,
+    "story": "Savaş döneminde hayatta kalmaya çalışan iki kardeşin dokunaklı hikayesini anlatır.",
+    "characters": ["Seita", "Setsuko"],
+    "poster_url": "https://www.ghibli.jp/images/hotarunohaka.jpg",
+    "imgs": []
+  },
+  {
+    "id": 5,
+    "title": "Kiki’s Delivery Service",
+    "romaji_title": "majo",
+    "year": 1989,
+    "rating": 7.9,
+    "story": "Genç bir cadı olan Kiki'nin kendi ayakları üzerinde durmayı öğrenme sürecini anlatır.",
+    "characters": ["Kiki", "Jiji", "Osono", "Tombo"],
+    "poster_url": "https://www.ghibli.jp/images/majo.jpg",
+    "imgs": [
+      "https://www.ghibli.jp/gallery/majo001.jpg",
+      "https://www.ghibli.jp/gallery/majo002.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Only Yesterday",
+    "romaji_title": "omoide",
+    "year": 1991,
+    "rating": 7.6,
+    "story": "Taeko'nun çocukluk anıları ile bugünkü hayatını sorgulamasını konu alır.",
+    "characters": ["Taeko", "Toshio"],
+    "poster_url": "https://www.ghibli.jp/images/omoide.jpg",
+    "imgs": []
+  },
+  {
+    "id": 7,
+    "title": "Porco Rosso",
+    "romaji_title": "porco",
+    "year": 1992,
+    "rating": 7.8,
+    "story": "Domuza dönüşmüş bir pilotun Adriyatik Denizi üzerindeki maceralarını anlatır.",
+    "characters": ["Porco Rosso", "Fio", "Curtis"],
+    "poster_url": "https://www.ghibli.jp/images/porco.jpg",
+    "imgs": []
+  },
+  {
+    "id": 8,
+    "title": "Ocean Waves",
+    "romaji_title": "umi",
+    "year": 1993,
+    "rating": 7.0,
+    "story": "Gençlik, dostluk ve ilk aşk temalarını sade bir anlatımla işler.",
+    "characters": ["Taku", "Rikako", "Yutaka"],
+    "poster_url": "https://www.ghibli.jp/images/umi.jpg",
+    "imgs": []
+  },
+  {
+    "id": 9,
+    "title": "Pom Poko",
+    "romaji_title": "tanuki",
+    "year": 1994,
+    "rating": 7.3,
+    "story": "Yaşam alanlarını korumaya çalışan rakunların mizahi mücadelesini anlatır.",
+    "characters": ["Tanuki Leader", "Gonta", "Oroku"],
+    "poster_url": "https://www.ghibli.jp/images/tanuki.jpg",
+    "imgs": []
+  },
+  {
+    "id": 10,
+    "title": "Whisper of the Heart",
+    "romaji_title": "mimi",
+    "year": 1995,
+    "rating": 8.0,
+    "story": "Kendi hayallerinin peşinden gitmeye çalışan genç bir kızın hikayesini anlatır.",
+    "characters": ["Shizuku", "Seiji", "Baron"],
+    "poster_url": "https://www.ghibli.jp/images/mimi.jpg",
+    "imgs": []
+  },
+  {
+    "id": 11,
+    "title": "Princess Mononoke",
+    "romaji_title": "mononoke",
+    "year": 1997,
+    "rating": 8.4,
+    "story": "Doğa ile insan arasındaki çatışmayı epik bir dille anlatır.",
+    "characters": ["Ashitaka", "San", "Lady Eboshi"],
+    "poster_url": "https://www.ghibli.jp/images/mononoke.jpg",
+    "imgs": []
+  },
+  {
+    "id": 12,
+    "title": "My Neighbors the Yamadas",
+    "romaji_title": "yamada",
+    "year": 1999,
+    "rating": 7.1,
+    "story": "Yamada ailesinin günlük yaşamını kısa ve eğlenceli hikayelerle sunar.",
+    "characters": ["Takashi", "Matsuko", "Noboru"],
+    "poster_url": "https://www.ghibli.jp/images/yamada.jpg",
+    "imgs": []
+  },
+  {
+    "id": 13,
+    "title": "Spirited Away",
+    "romaji_title": "chihiro",
+    "year": 2001,
+    "rating": 8.6,
+    "story": "Ruhlar dünyasında kaybolan Chihiro’nun büyüme ve cesaret hikayesini anlatır.",
+    "characters": ["Chihiro", "Haku", "No-Face", "Yubaba"],
+    "poster_url": "https://www.ghibli.jp/images/chihiro.jpg",
+    "imgs": []
+  },
+  {
+    "id": 14,
+    "title": "The Cat Returns",
+    "romaji_title": "baron",
+    "year": 2002,
+    "rating": 7.5,
+    "story": "Bir kızın kendini kediler diyarında bulmasını konu alır.",
+    "characters": ["Haru", "Baron", "Muta"],
+    "poster_url": "https://www.ghibli.jp/images/baron.jpg",
+    "imgs": []
+  },
+  {
+    "id": 15,
+    "title": "Howl’s Moving Castle",
+    "romaji_title": "howl",
+    "year": 2004,
+    "rating": 8.2,
+    "story": "Sophie ve büyücü Howl’un savaş ve sevgi dolu hikayesini anlatır.",
+    "characters": ["Howl", "Sophie", "Calcifer"],
+    "poster_url": "https://www.ghibli.jp/images/howl.jpg",
+    "imgs": []
+  },
+  {
+    "id": 16,
+    "title": "Tales from Earthsea",
+    "romaji_title": "ged",
+    "year": 2006,
+    "rating": 6.9,
+    "story": "Büyü ve denge temalarını işleyen fantastik bir hikaye sunar.",
+    "characters": ["Arren", "Ged", "Tenar"],
+    "poster_url": "https://www.ghibli.jp/images/ged.jpg",
+    "imgs": []
+  },
+  {
+    "id": 17,
+    "title": "Ponyo",
+    "romaji_title": "ponyo",
+    "year": 2008,
+    "rating": 7.7,
+    "story": "Denizden gelen küçük bir balığın insan olma hayalini anlatır.",
+    "characters": ["Ponyo", "Sosuke", "Lisa"],
+    "poster_url": "https://www.ghibli.jp/images/ponyo.jpg",
+    "imgs": []
+  },
+  {
+    "id": 18,
+    "title": "Arrietty",
+    "romaji_title": "karigurashi",
+    "year": 2010,
+    "rating": 7.6,
+    "story": "Minik insanların gizli yaşamını anlatan sıcak bir hikaye.",
+    "characters": ["Arrietty", "Sho", "Pod"],
+    "poster_url": "https://www.ghibli.jp/images/karigurashi.jpg",
+    "imgs": []
+  },
+  {
+    "id": 19,
+    "title": "From Up on Poppy Hill",
+    "romaji_title": "kokurikozaka",
+    "year": 2011,
+    "rating": 7.4,
+    "story": "1960'larda geçen, gençlik ve geçmişle yüzleşme temalı bir hikaye.",
+    "characters": ["Umi", "Shun", "Shiro"],
+    "poster_url": "https://www.ghibli.jp/images/kokurikozaka.jpg",
+    "imgs": []
+  },
+  {
+    "id": 20,
+    "title": "The Wind Rises",
+    "romaji_title": "kazetachinu",
+    "year": 2013,
+    "rating": 8.0,
+    "story": "Bir uçak tasarımcısının hayalleri ve savaş gerçeği arasındaki yolculuğu anlatır.",
+    "characters": ["Jiro", "Naoko", "Caproni"],
+    "poster_url": "https://www.ghibli.jp/images/kazetachinu.jpg",
+    "imgs": []
+  },
+  {
+    "id": 21,
+    "title": "When Marnie Was There",
+    "romaji_title": "marnie",
+    "year": 2014,
+    "rating": 7.8,
+    "story": "Yalnız bir kızın gizemli bir dostluk sayesinde kendini keşfetmesini anlatır.",
+    "characters": ["Anna", "Marnie"],
+    "poster_url": "https://www.ghibli.jp/images/marnie.jpg",
+    "imgs": []
+  },
+  {
+    "id": 22,
+    "title": "Earwig and the Witch",
+    "romaji_title": "aya",
+    "year": 2020,
+    "rating": 6.5,
+    "story": "Zeki bir kızın büyücülerle dolu tuhaf bir evde yaşadıklarını anlatır.",
+    "characters": ["Earwig", "Bella Yaga", "Mandrake"],
+    "poster_url": "https://www.ghibli.jp/images/aya.jpg",
+    "imgs": []
+  },
+  {
+    "id": 23,
+    "title": "The Boy and the Heron",
+    "romaji_title": "kimitachi",
+    "year": 2023,
+    "rating": 8.3,
+    "story": "Genç bir çocuğun fantastik bir dünyada yaşadığı içsel yolculuğu anlatır.",
+    "characters": ["Mahito", "Heron", "Natsuko"],
+    "poster_url": "https://www.ghibli.jp/images/kimitachi.jpg",
+    "imgs": []
+  }
+]

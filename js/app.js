@@ -1,157 +1,265 @@
 /* =======================
-   DOM ELEMENTS
+   DOM ELEMENTLERİ
 ======================= */
 const mediaList = document.getElementById("mediaList");
 const searchInput = document.getElementById("searchInput");
+const yearFilter = document.getElementById("yearFilter");
+const typeFilter = document.getElementById("typeFilter");
+
 const listSection = document.getElementById("listSection");
 const detailSection = document.getElementById("detailSection");
 const detailContent = document.getElementById("detailContent");
+
 const backBtn = document.getElementById("backBtn");
 const favoritesBtn = document.getElementById("favoritesBtn");
 const homeBtn = document.getElementById("homeBtn");
+let currentView = "home";
+
 
 /* =======================
-   STATE
+   UYGULAMA DURUMU (STATE)
 ======================= */
-let allBooks = [];
+let allMedia = []; // Tüm medya verileri
 let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 /* =======================
-   FETCH DATA
+   VERİ ÇEKME (FETCH)
 ======================= */
-const loadBooks = async () => {
+const loadMedia = async () => {
   try {
-    const response = await fetch("data/books.json");
-    const books = await response.json();
+    const response = await fetch("data/ghibli_films.json");
+    const data = await response.json();
 
-    allBooks = books;
-    displayBooks(books);
+    // JSON dizi veya obje olabilir
+    allMedia = Array.isArray(data) ? data : data.films;
+
+    displayMedia(allMedia);
+    populateYearFilter(allMedia);
+    populateTypeFilter();
   } catch (error) {
     console.error("Veri yüklenirken hata oluştu:", error);
   }
 };
 
 /* =======================
-   DISPLAY BOOKS
+   YIL FİLTRESİ DOLDURMA
 ======================= */
-const displayBooks = (books) => {
-  mediaList.innerHTML = "";
+const populateYearFilter = (media) => {
+  yearFilter.innerHTML = `<option value="">All Years</option>`;
 
-  books.forEach((book) => {
-    const card = document.createElement("article");
-    card.classList.add("card");
+  const years = [...new Set(media.map(item => item.year))]
+    .filter(Boolean)
+    .sort((a, b) => a - b);
 
-    card.innerHTML = `
-      <h3>${book.title}</h3>
-      <p><strong>Author:</strong> ${book.author || "Unknown"}</p>
-      <p><strong>Year:</strong> ${book.year}</p>
-
-      <button class="details-btn" data-id="${book.id}">
-        Details
-      </button>
-
-      <button class="fav-btn" data-id="${book.id}">
-        ${favorites.includes(book.id) ? "⭐" : "☆"}
-      </button>
-    `;
-
-    mediaList.appendChild(card);
-  });
-
-  /* Details buttons */
-  document.querySelectorAll(".details-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const bookId = btn.getAttribute("data-id");
-      showBookDetail(bookId);
-    });
-  });
-
-  /* Favorite buttons */
-  document.querySelectorAll(".fav-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const bookId = Number(btn.getAttribute("data-id"));
-      toggleFavorite(bookId);
-      btn.textContent = favorites.includes(bookId) ? "⭐" : "☆";
-    });
+  years.forEach(year => {
+    const option = document.createElement("option");
+    option.value = year;
+    option.textContent = year;
+    yearFilter.appendChild(option);
   });
 };
 
 /* =======================
-   BOOK DETAIL (SPA)
+   TİP FİLTRESİ
 ======================= */
-const showBookDetail = (id) => {
-  const selectedBook = allBooks.find(
-    (book) => book.id === Number(id)
-  );
+const populateTypeFilter = () => {
+  typeFilter.innerHTML = `
+    <option value="">All Types</option>
+    <option value="classic">Classic (Before 2000)</option>
+    <option value="modern">Modern (2000+)</option>
+  `;
+};
 
-  if (!selectedBook) return;
+/* =======================
+   MEDYA LİSTELEME
+======================= */
+const displayMedia = (media) => {
+  mediaList.innerHTML = "";
+
+  if (media.length === 0) {
+    mediaList.innerHTML = `<p style="padding:1rem">No results found.</p>`;
+    return;
+  }
+
+  media.forEach(item => {
+    const card = document.createElement("article");
+    card.classList.add("card");
+
+    card.innerHTML = `
+  <img src="${item.poster_url}" alt="${item.title} poster" class="card-img" />
+
+  <h3>${item.title}</h3>
+  <p class="year">${item.year}</p>
+
+  <div class="card-actions vertical">
+    <button class="details-btn full-btn" data-id="${item.id}">
+      Detaylara bak 🎬
+    </button>
+
+    <button class="fav-btn full-btn" data-id="${item.id}">
+  ${favorites.includes(item.id) ? "Favoriden Çıkart ❌" : "Favoriye Ekle ⭐"}
+</button>
+
+  </div>
+`;
+
+
+    mediaList.appendChild(card);
+  });
+
+  // Detay butonları
+  document.querySelectorAll(".details-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      showMediaDetail(btn.dataset.id);
+    });
+  });
+
+  // Favori butonları
+  document.querySelectorAll(".fav-btn").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
+
+    const id = Number(btn.dataset.id);
+
+    toggleFavorite(id);
+
+    // تحديث النص حسب الحالة الجديدة
+    btn.textContent = favorites.includes(id)
+      ? "Favoriden Çıkart ❌"
+      : "Favoriye Ekle ⭐";
+  });
+});
+
+};
+
+
+/* =======================
+   DETAY GÖRÜNÜMÜ (SPA)
+======================= */
+const showMediaDetail = (id) => {
+  const selected = allMedia.find(item => item.id == id);
+  if (!selected) return;
+
+  currentView = currentView === "favorites" ? "favorites" : "home";
+
+  // Karakterleri <li> haline getir
+  const charactersHTML = selected.characters && selected.characters.length
+    ? selected.characters.map(char => `<li>${char}</li>`).join("")
+    : "<li>No characters information.</li>";
 
   detailContent.innerHTML = `
-    <h2>${selectedBook.title}</h2>
-    <p><strong>Author:</strong> ${selectedBook.author}</p>
-    <p><strong>Year:</strong> ${selectedBook.year}</p>
-    <p><strong>Category:</strong> ${selectedBook.category}</p>
-    <p>${selectedBook.description}</p>
+    <img src="${selected.poster_url}" class="detail-img" />
+
+    <h2>${selected.title}</h2>
+
+    <p><strong>Year:</strong> ${selected.year}</p>
+    <p><strong>⭐ Rating:</strong> ${selected.rating ?? "N/A"}</p>
+
+    <p class="description">
+      <strong>Story:</strong><br>
+      ${selected.story ?? "No story available."}
+    </p>
+
+    <h3>🎭 Characters</h3>
+    <ul class="character-list">
+      ${charactersHTML}
+    </ul>
   `;
 
   listSection.style.display = "none";
   detailSection.style.display = "block";
 };
 
+
 /* =======================
-   FAVORITES (localStorage)
+   FAVORİLER (LOCALSTORAGE)
 ======================= */
 const toggleFavorite = (id) => {
-  if (favorites.includes(id)) {
-    favorites = favorites.filter((favId) => favId !== id);
-  } else {
-    favorites.push(id);
-  }
+  favorites = favorites.includes(id)
+    ? favorites.filter(favId => favId !== id)
+    : [...favorites, id];
 
   localStorage.setItem("favorites", JSON.stringify(favorites));
 };
 
 /* =======================
-   SEARCH
+   ARAMA + FİLTRELEME
 ======================= */
-searchInput.addEventListener("input", () => {
+const applyFilters = () => {
   const searchText = searchInput.value.toLowerCase();
+  const selectedYear = yearFilter.value;
+  const selectedType = typeFilter.value;
 
-  const filteredBooks = allBooks.filter((book) =>
-    book.title.toLowerCase().includes(searchText)
-  );
+  let filtered = allMedia;
 
-  displayBooks(filteredBooks);
+  if (searchText) {
+    filtered = filtered.filter(item =>
+      item.title.toLowerCase().includes(searchText)
+    );
+  }
+
+  if (selectedYear) {
+    filtered = filtered.filter(item => item.year == selectedYear);
+  }
+
+  if (selectedType === "classic") {
+    filtered = filtered.filter(item => item.year < 2000);
+  }
+
+  if (selectedType === "modern") {
+    filtered = filtered.filter(item => item.year >= 2000);
+  }
+
+  displayMedia(filtered);
   detailSection.style.display = "none";
   listSection.style.display = "block";
-});
+};
+
+
+searchInput.addEventListener("input", applyFilters);
+yearFilter.addEventListener("change", applyFilters);
+typeFilter.addEventListener("change", applyFilters);
 
 /* =======================
-   NAVIGATION
+   NAVİGASYON
 ======================= */
 backBtn.addEventListener("click", () => {
   detailSection.style.display = "none";
   listSection.style.display = "block";
+
+  if (currentView === "favorites") {
+    const favMedia = allMedia.filter(item =>
+      favorites.includes(item.id)
+    );
+    displayMedia(favMedia);
+  } else {
+    displayMedia(allMedia);
+  }
 });
+
 
 favoritesBtn.addEventListener("click", () => {
-  const favoriteBooks = allBooks.filter((book) =>
-    favorites.includes(book.id)
+  currentView = "favorites";
+
+  const favMedia = allMedia.filter(item =>
+    favorites.includes(item.id)
   );
 
-  displayBooks(favoriteBooks);
+  displayMedia(favMedia);
   detailSection.style.display = "none";
   listSection.style.display = "block";
 });
+
 
 homeBtn.addEventListener("click", () => {
-  displayBooks(allBooks);
-  detailSection.style.display = "none";
-  listSection.style.display = "block";
+  currentView = "home";
+  displayMedia(allMedia);
 });
 
+
+
+
 /* =======================
-   START APP
+   UYGULAMAYI BAŞLAT
 ======================= */
-loadBooks();
+loadMedia();

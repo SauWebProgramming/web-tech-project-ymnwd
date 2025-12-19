@@ -11,20 +11,31 @@
 <body>
 
   <header>
-    <nav>
+    <nav class="nav-bar">
       <h1>Media Library</h1>
 
       <ul>
-        <li><button id="homeBtn">Home</button></li>
-        <li><button id="favoritesBtn">Favorites</button></li>
+        <button id="homeBtn" aria-label="Go to home page">Home</button>
+        <button id="favoritesBtn" aria-label="Show favorite movies">Favorites</button>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Search -->
-    <section id="searchSection">
-      <input type="text" id="searchInput" placeholder="Search by title..." />
+
+    <!-- Search & Filters -->
+    <section id="searchSection" class="filter-row">
+      <label for="searchInput" class="sr-only">Search by title</label>
+        <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search by title..." 
+/>
+
+
+      <select id="yearFilter"></select>
+
+      <select id="typeFilter"></select>
     </section>
 
     <!-- Media List -->
@@ -37,10 +48,11 @@
       <button id="backBtn">← Back</button>
       <div id="detailContent"></div>
     </section>
+
   </main>
 
   <footer>
-    <p>Web Technologies Project</p>
+    <p>Yaman Ustaoğlu || B241200555</p>
   </footer>
 
   <!-- JavaScript -->
