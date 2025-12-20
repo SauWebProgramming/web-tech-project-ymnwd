@@ -63,12 +63,19 @@ const populateYearFilter = (media) => {
    TİP FİLTRESİ
 ======================= */
 const populateTypeFilter = () => {
-  typeFilter.innerHTML = `
-    <option value="">All Types</option>
-    <option value="classic">Classic (Before 2000)</option>
-    <option value="modern">Modern (2000+)</option>
-  `;
+  typeFilter.innerHTML = `<option value="">All Categories</option>`;
+
+  const categories = [...new Set(allMedia.map(item => item.category))]
+    .filter(Boolean);
+
+  categories.forEach(category => {
+    const option = document.createElement("option");
+    option.value = category;
+    option.textContent = category;
+    typeFilter.appendChild(option);
+  });
 };
+
 
 /* =======================
    MEDYA LİSTELEME
@@ -202,18 +209,17 @@ const applyFilters = () => {
     filtered = filtered.filter(item => item.year == selectedYear);
   }
 
-  if (selectedType === "classic") {
-    filtered = filtered.filter(item => item.year < 2000);
-  }
-
-  if (selectedType === "modern") {
-    filtered = filtered.filter(item => item.year >= 2000);
+  if (selectedType) {
+    filtered = filtered.filter(
+      item => item.category && item.category === selectedType
+    );
   }
 
   displayMedia(filtered);
   detailSection.style.display = "none";
   listSection.style.display = "block";
 };
+
 
 
 searchInput.addEventListener("input", applyFilters);

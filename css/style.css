@@ -228,3 +228,30 @@ footer {
   height: 1px;
   overflow: hidden;
 }
+
+/* =======================
+   DETAIL BACK BUTTON
+======================= */
+#backBtn {
+  background: linear-gradient(135deg, #6c7cff, #8b9bff);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(108,124,255,0.35);
+}
+
+#backBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(108,124,255,0.5);
+}
+
+#detailSection {
+  max-width: 900px;
+  margin: auto;
+}
