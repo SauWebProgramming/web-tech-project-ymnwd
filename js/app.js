@@ -207,7 +207,7 @@ const showMediaDetail = (id) => {
   detailSection.style.display = "block";
 };
 
-rgrggr
+
 
 
 /* =======================

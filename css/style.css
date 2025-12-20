@@ -3,8 +3,9 @@
 ======================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+
 /* =======================
-   ROOT VARIABLES
+   Root Değişkenleri
 ======================= */
 :root {
   --bg-main: #0b1020;
@@ -16,14 +17,18 @@
   --gold: #f5c451;
 }
 
-/* =======================
+
+/* ======================================
    RESET
-======================= */
+   Tarayıcıların varsayılan
+   margin ve padding değerlerini sıfırlar
+====================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 /* =======================
    BODY
@@ -34,6 +39,7 @@ body {
   color: var(--text-main);
   min-height: 100vh;
 }
+
 
 /* =======================
    HEADER
@@ -47,12 +53,14 @@ header {
   text-align: center;
 }
 
+/* Site başlığı */
 nav h1 {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
 
+/* Menü listesi */
 nav ul {
   list-style: none;
   display: flex;
@@ -60,6 +68,7 @@ nav ul {
   margin-bottom: 1.6rem;
 }
 
+/* Menü butonları */
 nav ul button {
   background: rgba(255,255,255,0.06);
   color: white;
@@ -70,15 +79,16 @@ nav ul button {
   transition: 0.3s;
 }
 
+/* Menü hover efekti */
 nav ul button:hover {
   background: linear-gradient(135deg, #6c7cff, #8b9bff);
   box-shadow: 0 10px 35px rgba(108,124,255,0.4);
   border-color: transparent;
 }
 
-/* =======================
+/* =================
    SEARCH & FILTERS
-======================= */
+================= */
 #searchSection {
   display: flex;
   gap: 1.2rem;
@@ -86,6 +96,7 @@ nav ul button:hover {
   margin-bottom: 2rem;
 }
 
+/* Arama inputu ve select alanları */
 #searchInput,
 #yearFilter,
 #typeFilter {
@@ -102,6 +113,7 @@ nav ul button:hover {
 #yearFilter,
 #typeFilter { max-width: 180px; width: 100%; }
 
+/* Focus (odaklanma) efekti */
 #searchInput:focus,
 #yearFilter:focus,
 #typeFilter:focus {
@@ -109,9 +121,10 @@ nav ul button:hover {
   box-shadow: 0 0 25px rgba(79,210,255,0.45);
 }
 
-/* =======================
+
+/* =============
    MEDIA GRID
-======================= */
+============= */
 #mediaList {
   padding: 2rem;
   display: grid;
@@ -119,9 +132,10 @@ nav ul button:hover {
   gap: 1.6rem;
 }
 
-/* =======================
+
+/* ========
    CARD
-======================= */
+======== */
 .card {
   background: linear-gradient(180deg, #151d36, #0f162d);
   border-radius: 22px;
@@ -132,11 +146,13 @@ nav ul button:hover {
   transition: 0.4s;
 }
 
+/* Kart hover animasyonu */
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 40px 100px rgba(108,124,255,0.25);
 }
 
+/* Poster görseli */
 .card-img {
   width: 100%;
   border-radius: 16px;
@@ -145,26 +161,30 @@ nav ul button:hover {
   margin-bottom: 0.8rem;
 }
 
+/* Film adı */
 .card h3 {
   font-size: 1.05rem;
   margin-bottom: 0.3rem;
 }
 
+/* Film yılı */
 .card .year {
   font-size: 0.85rem;
   color: var(--text-muted);
 }
 
+
 /* =======================
    CARD ACTIONS (FINAL)
 ======================= */
 .card-actions {
-  margin-top: auto;
+  margin-top: auto; /* Butonları kartın altına iter */
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
 
+/* Ortak buton stili */
 .full-btn {
   width: 100%;
   padding: 0.7rem;
@@ -175,27 +195,33 @@ nav ul button:hover {
   transition: 0.25s;
 }
 
+/* Detay butonu */
 .details-btn {
   background: linear-gradient(135deg, #6a7cff, #8f9bff);
   color: white;
 }
 
+/* Favori butonu */
 .fav-btn {
   background: var(--gold);
   color: #111;
 }
 
+/* Buton hover efekti */
 .full-btn:hover {
   transform: translateY(-2px);
 }
 
-/* =======================
+
+/* =====================
    DETAIL VIEW
-======================= */
+   Film detay sayfası
+===================== */
 #detailSection {
   padding: 2rem;
 }
 
+/* Detay kartı */
 #detailContent {
   max-width: 900px;
   margin: auto;
@@ -204,11 +230,13 @@ nav ul button:hover {
   padding: 2rem;
 }
 
+/* Detay poster görseli */
 .detail-img {
   max-width: 320px;
   float: left;
   margin-right: 2rem;
 }
+
 
 /* =======================
    FOOTER
@@ -219,15 +247,19 @@ footer {
   color: var(--text-muted);
 }
 
-/* =======================
+
+/* =============================
    ACCESSIBILITY
-======================= */
+    Ekran okuyucular için
+   gizli ama erişilebilir sınıf
+============================= */
 .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
 }
+
 
 /* =======================
    DETAIL BACK BUTTON
@@ -246,11 +278,13 @@ footer {
   box-shadow: 0 8px 25px rgba(108,124,255,0.35);
 }
 
+/* Geri butonu hover efekti */
 #backBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(108,124,255,0.5);
 }
 
+/* Detay bölümünü ortalama */
 #detailSection {
   max-width: 900px;
   margin: auto;
