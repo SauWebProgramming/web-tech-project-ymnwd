@@ -1,5 +1,8 @@
 # Interactive Media Library (SPA)
 
+| Öğrenci Adı Soyadı | Yaman Ustaoğlu | Öğrenci Numarası | B241200555 | Seçilen Proje | Seçenek 1: İnteraktif Medya Kitaplığı (SPA) | Canlı Yayın Linki | https://sauwebprogramming.github.io/web-tech-project-ymnwd/ | GitHub Repository | https://github.com/SauWebProgramming/web-tech-project-ymnwd
+
+
 ## Proje Tanımı
 Bu proje, harici bir API veya yerel JSON dosyası kullanarak film verilerini alan,
 bu verileri modern ve kullanıcı dostu bir arayüzde listeleyen, filtreleyen,
