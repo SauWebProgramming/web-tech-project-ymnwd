@@ -1,5 +1,5 @@
 # Interactive Media Library (SPA)
-Öğrenci Adı Soyadı | Yaman Ustaoğlu
+Öğrenci Adı Soyadı || Yaman Ustaoğlu
 
 Öğrenci Numarası || B241200555
 
@@ -11,87 +11,72 @@ GitHub Repository || https://github.com/SauWebProgramming/web-tech-project-ymnwd
 
 
 ## Proje Tanımı
-Bu proje, harici bir API veya yerel JSON dosyası kullanarak film verilerini alan,
-bu verileri modern ve kullanıcı dostu bir arayüzde listeleyen, filtreleyen,
+Bu proje, yerel bir JSON dosyasından film verilerini alarak,
+bu verileri modern bir arayüzde listeleyen, filtreleyen,
 detaylarını gösteren ve favorilere eklenmesini sağlayan
-tek sayfa uygulaması (Single Page Application - SPA) niteliğinde bir web projesidir.
-
+istemci taraflı (client-side) bir web uygulamasıdır.
 Proje tamamen istemci taraflı (client-side) olarak geliştirilmiş olup,
 herhangi bir sunucu taraflı dil veya veritabanı kullanmamaktadır.
 
+Uygulama, tek sayfa uygulaması (Single Page Application – SPA) mantığıyla
+çalışmakta olup sayfa yenilenmeden içerik güncellenmektedir.
+
 ---
 
-## Projenin Amacı
-Bu projenin temel amacı, modern web teknolojileri kullanılarak:
-- HTML, CSS ve JavaScript dosyalarının doğru şekilde ayrılmasını,
-- Asenkron veri yönetimini (fetch, async/await),
-- Dinamik DOM manipülasyonunu,
-- Kullanıcı etkileşimini (arama, filtreleme, favoriler),
-- Tek sayfa uygulaması (SPA) mantığını
-uygulamalı olarak göstermektir.
+## Projenin Kapsamı
+Bu proje kapsamında aşağıdaki konular uygulamalı olarak gerçekleştirilmiştir:
+
+- HTML, CSS ve JavaScript dosyalarının ayrı ve düzenli kullanımı
+- Yerel JSON dosyasından veri çekme (fetch API)
+- JavaScript ile dinamik DOM oluşturma
+- Kullanıcı etkileşimine dayalı arama ve filtreleme işlemleri
+- LocalStorage kullanarak favori verilerin saklanması
+- SPA mantığı ile detay görünümü oluşturulması
 
 ---
 
 ## Kullanılan Teknolojiler
 - **HTML5**
-  - Anlamsal (Semantic) etiketler (`header`, `nav`, `main`, `section`, `article`)
+  - Anlamsal (Semantic) etiketler
 - **CSS3**
-  - Flexbox & Grid
-  - CSS Variables
+  - Flexbox
+  - Grid yapısı
   - Hover ve transition efektleri
-  - Responsive tasarım
 - **JavaScript (ES6+)**
   - `const` ve `let`
   - Arrow Functions
   - `async / await`
   - Fetch API
 - **LocalStorage**
-  - Favori filmlerin tarayıcıda saklanması
 - **Git & GitHub**
-  - Versiyon kontrolü
-  - Düzenli commit geçmişi
 
 ---
 
-## Proje Özellikleri
-- Film kartlarının grid yapıda listelenmesi
-- Başlığa göre anlık arama
-- Yıla göre filtreleme
-- Kategoriye göre filtreleme
-- Sayfa yenilenmeden çalışan detay ekranı (SPA)
-- Favorilere ekleme ve favorilerden çıkarma
-- Favorilerin LocalStorage üzerinde saklanması
-- Responsive (mobil, tablet ve masaüstü uyumlu) tasarım
-- Modern ve estetik kullanıcı arayüzü (UI/UX)
+## Proje Yapısı
+Proje dosya yapısı aşağıdaki gibidir:
 
----
+- `index.html`  
+  → Sayfa yapısı ve içerik
 
-## Mimari Yapı
-Proje, içerik – stil – mantık ayrımına uygun olarak geliştirilmiştir:
+- `css/style.css`  
+  → Görsel tasarım ve yerleşim
 
-- `index.html` → Yapısal içerik (HTML)
-- `css/style.css` → Görsel tasarım ve düzen (CSS)
-- `js/app.js` → Uygulama mantığı ve etkileşimler (JavaScript)
-- `data/ghibli_films.json` → Yerel veri kaynağı
+- `js/app.js`  
+  → Uygulama mantığı ve etkileşimler
+
+- `data/ghibli_films.json`  
+  → Film verilerinin bulunduğu yerel JSON dosyası
 
 Inline CSS veya JavaScript kullanılmamıştır.
 
 ---
 
 ## Veri Yönetimi
-Proje, veri kaynağı olarak **yerel bir JSON dosyası** kullanmaktadır.
-Veriler `fetch()` API’si ile asenkron olarak alınmakta ve
-JavaScript üzerinden işlenerek DOM’a dinamik olarak yansıtılmaktadır.
+Film verileri, yerel bir JSON dosyasından `fetch()` kullanılarak alınmaktadır.
+Alınan veriler JavaScript ile işlenerek dinamik olarak ekrana basılmaktadır.
 
-Kullanıcı favorileri ise **LocalStorage** kullanılarak
-tarayıcı üzerinde kalıcı şekilde saklanmaktadır.
-
----
-
-## Erişilebilirlik (Accessibility)
-- Anlamsal HTML etiketleri kullanılmıştır
-- Kontrastlı renk paleti tercih edilmiştir
-- Butonlar ve etkileşimli alanlar kullanıcı dostu olacak şekilde tasarlanmıştır
+Kullanıcının favori olarak seçtiği filmler,
+tarayıcı üzerinde **LocalStorage** kullanılarak saklanmaktadır.
 
 ---
 
@@ -99,15 +84,12 @@ tarayıcı üzerinde kalıcı şekilde saklanmaktadır.
 Bu proje tamamen statik bir web uygulamasıdır.
 
 Çalıştırmak için:
-1. Proje dosyaları indirilir veya klonlanır
-2. `index.html` dosyası herhangi bir modern tarayıcıda açılır
-3. Ek bir kurulum veya sunucu gerektirmez
-
-(İsteğe bağlı olarak Live Server ile de çalıştırılabilir.)
+1. Proje dosyaları indirilir
+2. `index.html` dosyası tarayıcıda açılır
+3. Ek bir sunucu veya kurulum gerektirmez
 
 ---
 
 ## Versiyon Kontrolü
-Proje geliştirme süreci başından itibaren Git kullanılarak yönetilmiştir.
-Tüm geliştirme adımları anlamlı commit mesajları ile kayıt altına alınmıştır.
-
+Proje geliştirme süreci Git kullanılarak yönetilmiştir.
+Geliştirme aşamaları düzenli ve anlamlı commit mesajları ile kayıt altına alınmıştır.
