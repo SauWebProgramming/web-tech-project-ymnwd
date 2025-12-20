@@ -101,16 +101,3 @@ Bu proje tamamen statik bir web uygulamasıdır.
 Proje geliştirme süreci başından itibaren Git kullanılarak yönetilmiştir.
 Tüm geliştirme adımları anlamlı commit mesajları ile kayıt altına alınmıştır.
 
----
-
-## Video Sunumu
-Projenin genel işleyişini, kullanıcı arayüzünü ve kod yapısını
-ayrıntılı şekilde anlatan video sunumu
-ayrı olarak paylaşılacaktır.
-
----
-
-## Sonuç
-Bu proje kapsamında, modern web geliştirme prensipleri uygulanmış,
-istemci taraflı dinamik bir uygulama geliştirilmiş
-ve teorik bilgilerin pratikte nasıl kullanıldığı gösterilmiştir.
